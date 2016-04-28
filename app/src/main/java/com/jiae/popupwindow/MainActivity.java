@@ -51,13 +51,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.demand_popup, null);
         popupWindow = new PopupWindow(view, ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
+        popupWindow.setAnimationStyle(R.style.popup_window);
         popupWindow.setBackgroundDrawable(new BitmapDrawable());
         popupWindow.setOutsideTouchable(true);
         WindowManager.LayoutParams params = getWindow().getAttributes();//创建当前界面的一个参数对象
         params.alpha = 0.8f;
         getWindow().setAttributes(params);//把该参数对象设置进当前界面中
-
-
         popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
             @Override
             public void onDismiss() {
@@ -75,8 +74,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LayoutInflater inflater = LayoutInflater.from(this);
         View view = inflater.inflate(R.layout.demand_popup_select, null);
         popupWindow = new PopupWindow(view, ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT, true);
+        popupWindow.setAnimationStyle(R.style.popup_window);
         popupWindow.setContentView(view);
-
         text1 = (TextView) view.findViewById(R.id.text1);
         text2 = (TextView) view.findViewById(R.id.text2);
         text3 = (TextView) view.findViewById(R.id.text3);
@@ -139,6 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         //第一个参数为父View对象，即PopupWindow所在的父控件对象，第二个参数为它的重心，后面两个分别为x轴和y轴的偏移量
         popupWindow.showAtLocation(inflater.inflate(R.layout.activity_main, null), Gravity.CENTER, 0, 0);
+        //popupWindow.showAsDropDown(view,100,100);
     }
 
     /*private void initItem() {
