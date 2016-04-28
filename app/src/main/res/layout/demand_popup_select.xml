@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/popup_select"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/popup_select_text_title_bg"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="请选择"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/text1"
+                style="@style/popup_select"
+                android:text="LOGO设计" />
+
+            <TextView
+                android:id="@+id/text2"
+                style="@style/popup_select"
+                android:text="VI系统设计" />
+
+            <TextView
+                android:id="@+id/text3"
+                style="@style/popup_select"
+                android:text="DM单页" />
+
+            <TextView
+                android:id="@+id/text4"
+                style="@style/popup_select"
+                android:text="海报" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/cancel_icon"
+            android:onClick="select_cancel" />
+
+    </RelativeLayout>
+</RelativeLayout>
